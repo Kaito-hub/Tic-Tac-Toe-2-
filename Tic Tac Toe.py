@@ -15,7 +15,6 @@ width = screen_size // 3
 font = pygame.font.Font('freesansbold.ttf', width)
 win_font = pygame.font.Font('freesansbold.ttf', 100)
 
-
 class Spot:
     def __init__(self,row,col):
         self.row = row
@@ -84,7 +83,6 @@ def DRAW():
     textRect.center = (250,550)
     screen.blit(text,textRect)
     
-
 grid = make_grid()
 count = 2
 O = False
@@ -108,8 +106,7 @@ while running:
                     X.draw_x()
                     spot.X_T()
                     count += 1
-
-                    
+ 
                 elif count%2 == 1 and not spot.x_t and not spot.o_t:
                     O = spot
                     O.draw_o()
